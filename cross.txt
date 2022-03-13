@@ -1,0 +1,14 @@
+public class Demo {
+	@Test
+	@Parameters("browser")
+	
+	public void Tc01(String txt) {
+		if (txt.equalsIgnoreCase("firefox")) {
+		System.out.println("firefox launch");
+		
+				System.setProperty("webdriver.gecko.driver", "F:\\Automation\\geckodriver.exe");
+				WebDriver driver = new FirefoxDriver();
+						driver.get("https://www.facebook.com/signup");
+						driver.manage().window().maximize();
+				
+			
